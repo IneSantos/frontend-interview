@@ -1,0 +1,14 @@
+.site-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #D8D8D8;
+
+    img {
+        width: 25%;
+    }
+}
+
+.site-identity {
+    text-align: end;
+}

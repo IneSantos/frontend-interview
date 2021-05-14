@@ -1,0 +1,29 @@
+footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: #D8D8D8;
+}
+
+.socials {
+    img {
+        padding: 8px;
+        height: 24px;
+        width: 24px;
+    }
+
+    .subscribe {
+        display: flex;
+        flex-direction: row;
+
+        input {
+            flex: 1;
+        }
+    }
+
+    .send-link {
+        img {
+            height: 12px;
+            width: 12px;
+        }
+    }
+}
