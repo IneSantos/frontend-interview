@@ -16,6 +16,13 @@
     .percentages {
         margin-top: 100px;
 
+        @media only screen and (min-width: 768px) {
+            display: flex;
+            flex-wrap: wrap;
+            position: relative;
+            justify-content: center;
+        }
+
         h1 {
             font-family: "GlacialIndifferenceBold";
             font-size: 34px;
@@ -100,8 +107,28 @@
     margin-left: 8px;
 }
 
+.game-visctories{
+    @media only screen and (min-width: 768px) {
+        min-width: 50%;
+    }
+}
+
 .stat-section {
     margin: 22px 0;
+
+    @media only screen and (min-width: 768px) {
+        min-width: 50%;
+        position: relative;
+    }
+
+    &.game-history {
+        @media only screen and (min-width: 768px) {
+            min-width: 50%;
+            position: absolute;
+            right: 5px;
+            top: 120px;
+        }
+    }
 }
 
 .history {

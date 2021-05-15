@@ -13,14 +13,20 @@
   }
 </script>
 
-<style>
+<style lang="scss">
   .cell {
-    width: 132px;
-    height: 132px;
-    border: 2px solid rgb(75,75,75);
+    width: 64px;
+    height: 64px;
+    border: 2px solid #D8D8D8;
     font-size: 42px;
     display: flex;
     align-items: center;
     justify-content: center;
+
+     @media only screen and (min-width: 768px) {
+        width: 132px;
+        height: 132px;
+     }
+
   }
 </style>

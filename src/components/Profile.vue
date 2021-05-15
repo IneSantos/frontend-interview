@@ -9,7 +9,7 @@
       <li><p>Occupation: Ui/Ux designer</p></li>     
     </ul>
     <div class="about-me">
-        <h4>About me:</h4>
+        <p>About me:</p>
         <p>My Name Is john Smith lorem empus id fringilla molestie <br>ornare diam in olestie ipsum etium rosn ollicitudin est,<br>porttitor amet hitmassa Done cporttitor dolor shit dolor<br>kiren lorem nisl molestie pretium etfring.</p>
     </div>
   </section>

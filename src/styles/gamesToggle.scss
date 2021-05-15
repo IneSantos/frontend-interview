@@ -2,6 +2,10 @@
     margin-bottom: 16px;  
     background-color: white;  
 
+    @media only screen and (min-width: 768px) {
+        margin-top: 24px;
+    }
+
     .toggle {
         padding: 15px 26px;
         font-size: 24px;

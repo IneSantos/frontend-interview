@@ -15,10 +15,18 @@
 
     .title {
         font-size: 30px;
+
+        @media only screen and (min-width: 768px) {
+            font-size: 20px;
+        }
     }
 
     .description {
         font-size: 24px;
+
+        @media only screen and (min-width: 768px) {
+            font-size: 16px;
+        }
     }
 }
 
@@ -29,6 +37,11 @@
         padding: 8px;
         padding-left: 0;
         padding-top: 0;
+
+        @media only screen and (min-width: 768px) {
+            height: 28px;
+            width: 28px;
+        }
     }
 
     .subscribe {
@@ -44,6 +57,10 @@
             font-weight: bold;
             font-size: 18px;
             color: #D8D8D8;
+
+            @media only screen and (min-width: 768px) {
+                font-size: 14px;
+            }
         }
 
         input::placeholder {
@@ -57,10 +74,15 @@
         outline: 0;
         border-style: none;
 
-        img {
+        img {   
             height: 24px;
             width: 24px;
             padding: 8px;
+
+            @media only screen and (min-width: 768px) {
+                height: 18px;
+                width: 18px;
+            }
         }
     }
 }

@@ -12,9 +12,17 @@
         font-family: "GlacialIndifferenceBold";
         font-size: 46px;
         margin-bottom: 0;
+
+        @media only screen and (min-width: 768px) {
+            font-size: 38px;
+        }
     }
 
     p {
         font-size: 30px; 
+
+        @media only screen and (min-width: 768px) {
+            font-size: 24px;
+        }
     }
 }
