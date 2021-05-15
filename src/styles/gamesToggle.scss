@@ -1,0 +1,20 @@
+.gamestoggle {
+    margin-bottom: 16px;  
+    background-color: white;  
+
+    .toggle {
+        padding: 15px 26px;
+        font-size: 24px;
+        border-style: none;
+        border-radius: 7px;
+        color: #2C2E30;
+        background-color:  white;
+        
+        &.active {
+            font-weight: bold;
+            background-color: grey;
+            color: #F6F8F9;
+        }
+    }
+} 
+

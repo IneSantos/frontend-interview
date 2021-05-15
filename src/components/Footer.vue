@@ -2,26 +2,26 @@
 <template>
     <footer>
         <div class="site-footer">
-           <div class="">
-                <h4>About page</h4>
-                <p>Play tic tac toe or 4-in-a-row anytime!</p>
-                <p>Created by @yourname</p>
+           <div>
+                <h4 class="title">About page</h4>
+                <p class="description">Play tic tac toe or 4-in-a-row anytime!</p>
+                <p class="description">Created by @yourname</p>
             </div>
            <div class="">
-                <h4>Contacts</h4>
-                <a href="tel:+351123456789">(+351) 123 456 789</a>
-                <p>Rua Sá da Bandira, 111, Porto</p>
+                <h4 class="title">Contacts</h4>
+                <a href="tel:+351123456789" class="description">(+351) 123 456 789</a>
+                <p class="description">Rua Sá da Bandira, 111, Porto</p>
             </div>
             <div class="socials">
-                <h4>Stay in touch</h4>
+                <h4 class="title">Stay in touch</h4>
                 <div>
                     <a href="#"><img src="@/assets/images/facebook.svg" alt="Facebook Logo" /></a>
                     <a href="#"><img src="@/assets/images/twitter.svg" alt="Twitter Logo" /></a>
                     <a href="#"><img src="@/assets/images/instagram.svg" alt="Instagram Logo" /></a>
                 </div>
                 <div class="subscribe">
-                    <input type="email" placeholder="Subscribe our games">
-                    <button id="button-addon1" type="submit" class="send-link"><img src="@/assets/images/send.svg" alt="Instagram Logo" /></button>
+                    <input type="email" placeholder=" Subscribe our games">
+                    <button type="submit" class="send-link"><img src="@/assets/images/send.svg" alt="Instagram Logo" /></button>
                 </div>
             </div>
         </div>

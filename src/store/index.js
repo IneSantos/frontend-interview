@@ -36,7 +36,7 @@ export const store = {
         state.lossPlayer2 = lossPlayer2
       },
       SET_GAME_HISTORY(state, player) {
-        state.push(player);
+        state.gameHistory[state.numOfgames-1] = player;
       },
       RESET_GAME(state) {
         state.hasgameStarted = false;

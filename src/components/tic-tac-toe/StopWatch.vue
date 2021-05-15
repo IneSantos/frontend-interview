@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>{{formattedElapsedTime}}</h1>
+    <p>{{formattedElapsedTime}}</p>
   </div>
 </template>
 
@@ -36,3 +36,9 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+  p {
+    font-size: 30px;
+  }
+</style>

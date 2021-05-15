@@ -4,7 +4,7 @@
         <img src="@/assets/images/SWORD_Health_logo.svg" alt="Site Logo" />
         <div class="site-identity">
             <h3>Frontend developer</h3>
-            <h4>Challenge</h4>
+            <p>Challenge</p>
         </div>   
     </header>
 </template>

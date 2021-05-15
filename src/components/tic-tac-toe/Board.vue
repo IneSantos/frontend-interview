@@ -1,5 +1,10 @@
 <template>
   <div class="tictactoe-board">
+    <div v-if="finished5rounds" class="status">
+      <div v-if="stalemate" class="result stale">It's a draw!<br>Stalemate!</div>
+      <div v-else class="result">Finished!<br><span class="winner">{{winner}}</span> wins!</div>
+    </div>
+
     <div class="grid">
       <div v-for="(row, row_index) in 3" :key="row">
         <div v-for="(column, column_index) in 3" :key="column">
@@ -9,9 +14,9 @@
     </div>
 
     <div class="score">
-      <Player name="Player 1" :score="player1"/>
-      <StopWatch ref="stopwatch"/>
-      <Player name="Player 2" :score="player2"/>
+      <Player name="Player 1" :score="player1" class="score-info"/>
+      <StopWatch ref="stopwatch" class="score-info"/>
+      <Player name="Player 2" :score="player2" class="score-info"/>
     </div>
   </div>
 </template>
@@ -41,7 +46,21 @@ export default {
       player2: 0,
       finished: false,
       stalemate: false,
-      watchStarted: false
+      watchStarted: false,
+      finished5rounds: false,
+      winner: ''
+    }
+  },
+  computed: {
+    numOfgames () {
+      return this.$store.getters.getNumOfGames;
+    }
+  },
+  watch: {
+    numOfgames: function () {
+      this.finished5rounds =  this.numOfgames === 4;
+      this.winner = this.player1 >  this.player2 ? "P1" : "P2";
+      this.$store.dispatch('setGameHistory', this.winner);
     }
   },
   methods: {
@@ -59,8 +78,9 @@ export default {
           this.$store.dispatch('setGameStart', true);
         }
 
-        this.finished = this.checkWinner();
+        this.finished = this.checkWinner() || this.checkStalemate();
         this.stalemate = this.checkStalemate();
+        console.log("finished", this.finished);
         this.updateScore();
         this.nextPlayer();
         

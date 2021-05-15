@@ -6,7 +6,7 @@
     background-color: #F6F8F9;
 
     img {
-        width: 50%;
+        width: 30%;
         
         @media only screen and (min-width: 768px) {
             width: 13%;
@@ -19,7 +19,18 @@
 .site-identity {
     text-align: end;
 
-    h4 {
-        margin-top: 0;
+    h3 {
+        font-family: "GlacialIndifferenceBold";
+        font-size: 26px;
+        margin-bottom: 0;
+    }
+
+    p {
+
+        font-family: "GlacialIndifferenceItalic";
+        font-size: 21px;
+        margin-top: 12px;
+        letter-spacing: 1px;
+        font-weight: bold;
     }
 }

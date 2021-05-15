@@ -3,9 +3,9 @@
    <section class="container"> 
     <div class="circle"> (Photo area) </div>
     <ul class="profile-info">
-      <li><h1>John Smith</h1></li>
+      <li><p class="name">John Smith</p></li>
       <li><p>Age: 30</p></li>
-      <li><p>Loaction: Porto</p></li>   
+      <li><p>Location: Porto</p></li>   
       <li><p>Occupation: Ui/Ux designer</p></li>     
     </ul>
     <div class="about-me">

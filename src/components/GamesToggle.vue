@@ -1,13 +1,13 @@
 
 <template>
-  <div class="">
+  <div class="gamestoggle">
     <button
-        class=""
+        class="toggle"
         @click="toggle"
         :class="[showTicTacToe ? 'active' : '']"
     >Tic tac toe</button>
     <button
-        class=""
+        class="toggle"
         @click="toggle"
         :class="[!showTicTacToe ? 'active' : '']"
     >4-in-a-row</button>
@@ -16,6 +16,7 @@
 
 
 <script>
+import '@/styles/gamesToggle.scss';
 export default {
   name: 'GamesToggle',
     data() {
