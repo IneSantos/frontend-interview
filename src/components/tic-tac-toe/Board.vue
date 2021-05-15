@@ -20,7 +20,7 @@
 import '@/styles/tic-tac-toe/board.scss';
 import Player from './Player';
 import Cell from './Cell';
-import StopWatch from './StopWatch'
+import StopWatch from './StopWatch';
 
 export default {
   name: 'TicTacToe',
@@ -47,15 +47,16 @@ export default {
   methods: {
       playMove(x, y) {
         if (this.finished || this.board[x][y] !== '') {
-          // Invalid move.
           return;
         }
 
         this.board[x][y] = this.player;
         this.$forceUpdate();
+
         if(!this.watchStarted){
           this.$refs.stopwatch.start();
           this.watchStarted = true;
+          this.$store.dispatch('setGameStart', true);
         }
 
         this.finished = this.checkWinner();
@@ -108,7 +109,12 @@ export default {
       },
       updateScore: function() {
         if(!this.finished) return;
-        this.player === "x" ? ++this.player1 : ++this.player2;
+
+        this.player === "x" ? ++this.player1 :  ++this.player2;
+        this.$store.dispatch('setWinsPlayer1', this.player1);
+        this.$store.dispatch('setWinsPlayer2', this.player2);
+        this.$store.dispatch('incNumOfGames');
+
         this.$refs.stopwatch.stop();
         this.$refs.stopwatch.reset();
         this.resetBoard();

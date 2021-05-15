@@ -3,6 +3,7 @@
     <Header/>
     <Profile/>
     <TicTacToe/>
+    <Statistics/>
     <Footer/>
   </div>
 </template>
@@ -12,7 +13,8 @@ import '@/styles/main.css';
 import Header from './components/Header.vue';
 import Footer from './components/Footer.vue';
 import Profile from './components/Profile.vue';
-import TicTacToe from './components/tic-tac-toe/TicTacToe.vue';
+import TicTacToe from './components/TicTacToe.vue';
+import Statistics from './components/Statistics.vue';
 
 export default {
   name: 'App',
@@ -20,7 +22,18 @@ export default {
     Header,
     Footer,
     Profile,
-    TicTacToe
+    TicTacToe,
+    Statistics
+  },
+  computed: {
+    numOfgames () {
+      return this.$store.getters.getNumOfGames;
+    }
+  },
+  watch: {
+    numOfgames: function () {
+      console.log("numOfgames", this.numOfgames);
+    }
   }
 }
 </script>
