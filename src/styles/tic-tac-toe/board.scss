@@ -4,7 +4,6 @@
     align-items: center;
 }
 
-
 .grid {
     display: flex;
     flex-wrap: wrap;
@@ -15,4 +14,5 @@
 .score {
     display: flex;
     flex-direction: row;
+    align-items: center;
 }

@@ -10,9 +10,9 @@ html, body {
 }
 
 #app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
+    font-family: "GlacialIndifferenceRegular";
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2C3E30;
-  }
+}

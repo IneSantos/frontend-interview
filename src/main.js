@@ -1,49 +1,15 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import App from './App.vue'
+import store from './store/index'
 import Cell from './components/tic-tac-toe/Cell.vue';
 
 Vue.config.productionTip = false
 Vue.use(Vuex)
 
-Vue.component('cell', Cell);
-
-const store = new Vuex.Store({
-  state: {
-    board:  [
-      ['', '', ''],
-      ['', '', ''],
-      ['', '', '']
-    ]
-  },
-  mutations: {
-    SET_BOARD(state, board){
-      state.board = board
-    },
-    RESET_BOARD(){
-      state.board =  [
-        ['', '', ''],
-        ['', '', ''],
-        ['', '', '']
-      ]
-    }
-  },
-  actions: {
-    setBoard(context, board){
-      context.commit('SET_BOARD', board);
-    },
-    resetBoard(context){
-      context.commit('RESET_BOARD')
-    }
-  },
-  getters: {
-    getBoard(state) {
-      return state.board;
-    }
-  }
-})
+const store2use = new Vuex.Store(store)
 
 new Vue({
   render: h => h(App),
-  store: store
+  store: store2use
 }).$mount('#app')
