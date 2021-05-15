@@ -1,14 +1,28 @@
-footer {
+.site-footer {
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
+    align-items: center;
     background-color: #D8D8D8;
+    padding-top: 42px;
+    padding-bottom: 42px;
+
+    @media only screen and (min-width: 768px) {
+        flex-direction: row;
+        justify-content: space-around;
+        text-align: initial;
+    }
 }
 
 .socials {
     img {
-        padding: 8px;
         height: 24px;
         width: 24px;
+        padding: 8px;
+    }
+
+    img:first-child {
+        padding-left: 0;
     }
 
     .subscribe {

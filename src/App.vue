@@ -8,6 +8,7 @@
 </template>
 
 <script>
+import '@/styles/main.css';
 import Header from './components/Header.vue';
 import Footer from './components/Footer.vue';
 import Profile from './components/Profile.vue';
@@ -23,13 +24,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2C3E30;
-}
-</style>

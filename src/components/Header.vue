@@ -3,8 +3,8 @@
     <header class="site-header">
         <img src="@/assets/images/SWORD_Health_logo.svg" alt="Site Logo" />
         <div class="site-identity">
-            <h1>Frontend developer</h1>
-            <h2>Challenge</h2>
+            <h3>Frontend developer</h3>
+            <h4>Challenge</h4>
         </div>   
     </header>
 </template>

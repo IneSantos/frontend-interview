@@ -1,18 +1,18 @@
 
 <template>
-   <div> 
+   <section class="container"> 
     <div class="circle"> (Photo area) </div>
-    <ul>
-      <li>John Smith</li>
-      <li>Age: 30</li>
-      <li>Loaction: Porto</li>   
-      <li>Occupation: Ui/Ux designer</li>     
+    <ul class="profile-info">
+      <li><h1>John Smith</h1></li>
+      <li><p>Age: 30</p></li>
+      <li><p>Loaction: Porto</p></li>   
+      <li><p>Occupation: Ui/Ux designer</p></li>     
     </ul>
     <div class="about-me">
         <h4>About me:</h4>
-        <p>My Name Is john Smith lorem empus id fringilla molestie ornare diam in olestie ipsum etium rosn ollicitudin est, porttitor amet hitmassa Done cporttitor dolor shit dolor kiren lorem nisl molestie pretium etfring.</p>
+        <p>My Name Is john Smith lorem empus id fringilla molestie <br>ornare diam in olestie ipsum etium rosn ollicitudin est,<br>porttitor amet hitmassa Done cporttitor dolor shit dolor<br>kiren lorem nisl molestie pretium etfring.</p>
     </div>
-  </div>
+  </section>
 </template>
 
 
