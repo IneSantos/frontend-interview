@@ -8,7 +8,7 @@
     <div class="grid">
       <div v-for="(row, row_index) in 3" :key="row">
         <div v-for="(column, column_index) in 3" :key="column">
-          <Cell :value="board[row_index][column_index]"  @click="playMove(row_index,column_index)"/>
+          <Cell :value="board[row_index][column_index]"  @click="playMove(row_index,column_index)" :ref="`cell-${row_index}-${column_index}`"/>
         </div>
       </div>
     </div>
@@ -80,7 +80,6 @@ export default {
 
         this.finished = this.checkWinner() || this.checkStalemate();
         this.stalemate = this.checkStalemate();
-        console.log("finished", this.finished);
         this.updateScore();
         this.nextPlayer();
         

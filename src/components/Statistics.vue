@@ -77,16 +77,16 @@ export default {
         return (wins/5) * 100;
     },
     lossPlayer1 () {
-        const loss = +this.$store.getters.getLossPlayer1;
-        return (loss/5) * 100;
+        const loss = +this.$store.getters.getWinsPlayer1;
+        return 100 - ((loss/5) * 100);
     },
     winsPlayer2 () {
         const wins = +this.$store.getters.getWinsPlayer2;
         return (wins/5) * 100;
     },
     lossPlayer2 () {
-        const loss = +this.$store.getters.getLossPlayer2;
-        return (loss/5) * 100;
+        const loss = +this.$store.getters.getWinsPlayer2;
+        return 100 - ((loss/5) * 100);
     },
     hasGameStarted () {
         return this.$store.getters.getHasGameStarted;

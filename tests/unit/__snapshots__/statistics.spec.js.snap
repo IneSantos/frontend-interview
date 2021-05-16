@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Statistics.vue renders default 1`] = `
+<section id="statistics" class="statistics">
+  <div class="header">
+    <h1>Awesome statistics</h1>
+    <p>All statistics in on place!</p>
+  </div>
+  <div class="percentages">
+    <div class="game-visctories">
+      <h1>Game victories %</h1>
+      <div class="players">
+        <div class="stats-container">
+          <p>Player 1</p>
+          <div class="victory-loss">
+            <div class="stats">
+              <div class="statsCircle">0%</div>
+              <p>V</p>
+            </div>
+            <div class="stats">
+              <div class="statsCircle">100%</div>
+              <p>L</p>
+            </div>
+          </div>
+        </div>
+        <div class="stats-container">
+          <p>Player 2</p>
+          <div class="victory-loss">
+            <div class="stats">
+              <div class="statsCircle">0%</div>
+              <p>V</p>
+            </div>
+            <div class="stats">
+              <div class="statsCircle">100%</div>
+              <p>L</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="stat-section">
+      <h1>Played matchs</h1>
+      <div class="dots">
+        <div><span class="dot active"></span></div>
+        <div><span class="dot active"></span></div>
+        <div><span class="dot active"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+      </div>
+    </div>
+    <div class="stat-section game-history">
+      <h1>Game history</h1>
+      <div class="history">
+        <div class="winner">
+          P1
+        </div>
+        <div class="winner">
+          P1
+        </div>
+        <div class="winner">
+          P2
+        </div>
+        <div class="winner">
+
+        </div>
+        <div class="winner">
+
+        </div>
+      </div>
+    </div>
+    <div class="stat-section">
+      <h1>Total time</h1>
+      <stopwatch-stub></stopwatch-stub>
+    </div>
+  </div>
+</section>
+`;

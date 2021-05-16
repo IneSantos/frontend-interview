@@ -3,7 +3,7 @@
   <section class="games">
     <h1>Tic tac toe games</h1>
     <p>Welcome to the best game in the world.</p>
-    <GamesToggle @toggle="toggleGames"/>
+    <GamesToggle @toggle="toggleGames" ref="gameToggle"/>
     <Board/>
   </section>
 </template>

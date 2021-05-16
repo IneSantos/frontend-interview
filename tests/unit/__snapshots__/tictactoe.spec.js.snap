@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TicTacToe.vue renders default 1`] = `
+<section class="games">
+  <h1>Tic tac toe games</h1>
+  <p>Welcome to the best game in the world.</p>
+  <gamestoggle-stub></gamestoggle-stub>
+  <board-stub></board-stub>
+</section>
+`;

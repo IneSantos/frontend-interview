@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App.vue renders default 1`] = `
+<div id="app">
+  <header-stub></header-stub>
+  <profile-stub></profile-stub>
+  <tictactoe-stub></tictactoe-stub>
+  <statistics-stub></statistics-stub>
+  <footer-stub></footer-stub>
+</div>
+`;

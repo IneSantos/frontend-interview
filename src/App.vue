@@ -24,16 +24,6 @@ export default {
     Profile,
     TicTacToe,
     Statistics
-  },
-  computed: {
-    numOfgames () {
-      return this.$store.getters.numOfgames;
-    }
-  },
-  watch: {
-    numOfgames: function () {
-      console.log("numOfgames", this.numOfgames)
-    }
   }
 }
 </script>
