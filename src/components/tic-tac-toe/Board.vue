@@ -62,7 +62,10 @@ export default {
       this.finished5rounds =  this.numOfgames === 5 || this.player1 === 3 || this.player2 === 3;
       this.winner = this.player1 >  this.player2 ? "P1" : "P2";
       this.$store.dispatch('setGameHistory', this.winner);
-      this.scrollToStats();
+      
+      setTimeout( () => {
+        this.scrollToStats();
+      }, 1000); 
     }
   },
   methods: {
@@ -141,18 +144,56 @@ export default {
         this.$store.dispatch('setWinsPlayer1', this.player1);
         this.$store.dispatch('setWinsPlayer2', this.player2);
         this.$store.dispatch('incNumOfGames');
+        this.highLightWinner();
 
         this.$refs.stopwatch.stop();
         this.$refs.stopwatch.reset();
-        this.resetBoard();
+
+        setTimeout( () => {
+          this.resetBoard();
+        }, 1500); 
       },
-      scrollToStats() {
+      scrollToStats: function() {
         if(!this.finished5rounds) return; 
 
         let container = document.getElementById("statistics");
         container.scrollIntoView({ behavior: 'smooth', block: 'end', inline: 'nearest'});
-      }
+      },
+      highLightWinner: function () {
+       const index = [
+          this.checkValues(this.board[0]), 
+          this.checkValues(this.board[1]),
+          this.checkValues(this.board[2]),
+          this.checkValues([this.board[0][0], this.board[1][0], this.board[2][0]]),
+          this.checkValues([this.board[0][1], this.board[1][1], this.board[2][1]]),
+          this.checkValues([this.board[0][2], this.board[1][2], this.board[2][2]]),
+          this.checkValues([this.board[0][0], this.board[1][1], this.board[2][2]]),
+          this.checkValues([this.board[0][2], this.board[1][1], this.board[2][0]])
+        ].indexOf(true);
 
+        if(index === -1) return;
+
+        const cases =  [
+          [{row: 0, col: 0}, {row: 0, col: 1}, {row: 0, col: 2}],
+          [{row: 1, col: 0}, {row: 1, col: 1}, {row: 1, col: 2}],
+          [{row: 2, col: 0}, {row: 2, col: 1}, {row: 2, col: 2}],
+          [{row: 0, col: 0}, {row: 1, col: 0}, {row: 2, col: 0}],
+          [{row: 0, col: 1}, {row: 1, col: 1}, {row: 2, col: 1}],
+          [{row: 0, col: 2}, {row: 1, col: 2}, {row: 2, col: 2}],
+          [{row: 0, col: 0}, {row: 1, col: 1}, {row: 2, col: 2}],
+          [{row: 0, col: 2}, {row: 1, col: 1}, {row: 2, col: 0}],
+        ]
+
+        cases[index].forEach(elem => {
+          this.$refs[`cell-${elem.row}-${elem.col}`][0].$el.style.color = '#00DCA4';
+
+           setTimeout( () => {
+              this.$refs[`cell-${elem.row}-${elem.col}`][0].$el.style.color = 'inherit';
+            }, 1500); 
+        })
+
+        
+      }
   }
 
 }
