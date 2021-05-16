@@ -1,4 +1,3 @@
-
 <template>
     <footer>
         <div class="site-footer">

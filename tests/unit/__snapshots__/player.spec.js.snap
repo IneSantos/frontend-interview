@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Player.vue renders default 1`] = `
+<div class="player">
+  <h1></h1>
+  <p></p>
+</div>
+`;
+
+exports[`Player.vue renders props.msg when passed 1`] = `
+<div class="player">
+  <h1></h1>
+  <p></p>
+</div>
+`;

@@ -27,12 +27,12 @@ export default {
   },
   computed: {
     numOfgames () {
-      return this.$store.getters.getNumOfGames;
+      return this.$store.getters.numOfgames;
     }
   },
   watch: {
     numOfgames: function () {
-      console.log("numOfgames", this.numOfgames);
+      console.log("numOfgames", this.numOfgames)
     }
   }
 }
