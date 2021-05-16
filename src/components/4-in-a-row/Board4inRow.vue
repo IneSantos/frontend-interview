@@ -154,9 +154,9 @@ export default {
                 // horizontalCheck 
                 for (let j = 0; j < this.board[0].length-3 ; j++ ){
                     for (let i = 0; i < this.board.length ; i++){
-                        // if (this.board[i][j] == player && this.board[i][j+1] == player && this.board[i][j+2] == player && this.board[i][j+3] == player){
-                        //     return true;
-                        // }           
+                        if (this.board[i][j] == player && this.board[i][j+1] == player && this.board[i][j+2] == player && this.board[i][j+3] == player){
+                            return true;
+                        }           
                     }
                 }
                 // verticalCheck
