@@ -16,8 +16,14 @@
 import '@/styles/gamesToggle.scss';
 export default {
   name: 'GamesToggle',
+  data() {
+        return {
+            showTicTacToe: true
+        };
+    },
     methods: {
         toggle() {
+            this.showTicTacToe = !this.showTicTacToe;
             this.$emit('toggle', this.showTicTacToe);
         }
     }

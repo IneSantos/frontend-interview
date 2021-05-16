@@ -29,7 +29,7 @@ import Cell from './Cell';
 import StopWatch from './StopWatch';
 
 export default {
-  name: 'TicTacToe',
+  name: 'Board',
   components: {
     Player,
     Cell,
