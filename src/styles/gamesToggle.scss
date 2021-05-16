@@ -5,21 +5,50 @@
     @media only screen and (min-width: 768px) {
         margin-top: 24px;
     }
-
-    .toggle {
-        padding: 15px 26px;
-        font-size: 24px;
-        border-style: none;
-        border-radius: 7px;
-        color: #2C2E30;
-        background-color:  white;
-        
-        &.active {
-            font-weight: bold;
-            background-color: grey;
-            color: #F6F8F9;
-        }
-    }
 } 
 
+.choice{
+    input {
+        position: absolute !important;
+        clip: rect(0, 0, 0, 0);
+        height: 1px;
+        width: 1px;
+        border: 0;
+        overflow: hidden;
+        border-radius: 7px;
+    }
+
+
+    label {
+        background-color:  white;
+        color: rgba(0, 0, 0, 0.6);
+        padding: 15px 26px;
+        font-size: 24px;
+        line-height: 1;
+        text-align: center;
+        margin-right: -1px;
+        border-style: none;
+        transition: all 0.2s ease-out;
+    }
+
+    label:hover {
+        cursor: pointer;
+    }
+    
+    input:checked + label {
+        font-weight: bold;
+        color: #F6F8F9;
+        background-color: grey;
+        box-shadow: none;
+    }
+
+    label:first-of-type {
+        border-radius: 7px 0 0 7px;
+    }
+    
+    label:last-of-type {
+        border-radius: 0 7px 7px 0;
+      }
+      
+  }
 

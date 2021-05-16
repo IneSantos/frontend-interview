@@ -1,3 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`GamesToggle.vue renders default 1`] = `<div class="gamestoggle"><button class="toggle active">Tic tac toe</button> <button class="toggle">4-in-a-row</button></div>`;
+exports[`GamesToggle.vue renders default 1`] = `
+<div class="gamestoggle">
+  <div class="choice"><input type="radio" id="radio-one" name="switch-one" value="yes" checked="checked"> <label for="radio-one">Tic tac toe</label> <input type="radio" id="radio-two" name="switch-one" value="no"> <label for="radio-two">4-in-a-row</label></div>
+</div>
+`;

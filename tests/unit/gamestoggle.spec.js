@@ -21,12 +21,4 @@ describe('GamesToggle.vue', () => {
     await wrapper.findComponent({ ref: "tic-tac-toe" }).trigger('click');
     expect(mockMethod).toHaveBeenCalled();
   })
-
-  it('Should should change option shown when toggle button is clicked', async () => {
-    const wrapper = mount( GamesToggle );
-
-    expect(wrapper.vm.$data.showTicTacToe).toBeTruthy();
-    await wrapper.findComponent({ ref: "tic-tac-toe" }).trigger('click');
-    expect(wrapper.vm.$data.showTicTacToe).toBeFalsy();
-  })
 })
