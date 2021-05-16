@@ -24,14 +24,18 @@ export const store = {
       },
       RESET_GAME(state) {
         state.hasgameStarted = false;
+        state.numOfgames = 0;
+        state.winsPlayer1 = 0;
+        state.winsPlayer2 = 0;
+        state.gameHistory = ['', '', '' , '', ''];
       }
     },
     actions: {
       setGameStart(context, hasgameStarted){
         context.commit('SET_GAME_STARTED', hasgameStarted);
       },
-      resetBoard(context){
-        context.commit('RESET_BOARD')
+      resetGame(context){
+        context.commit('RESET_GAME')
       },
       incNumOfGames(context){
         context.commit('INC_NUM_GAMES');

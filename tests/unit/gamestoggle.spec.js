@@ -1,5 +1,12 @@
-import { mount, shallowMount } from '@vue/test-utils'
+import { mount, shallowMount, createLocalVue } from '@vue/test-utils'
+import Vuex from 'vuex'
 import GamesToggle from '@/components/GamesToggle.vue'
+import { storeMocked } from '../__mocks__/store.js'
+
+const localVue = createLocalVue();
+localVue.use(Vuex);
+
+const store = new Vuex.Store(storeMocked);
 
 describe('GamesToggle.vue', () => {
   it('renders default', () => {
@@ -8,7 +15,7 @@ describe('GamesToggle.vue', () => {
   })
 
   it('Should should emmit toggle when toggle button is clicked', async () => {
-    const wrapper = mount( GamesToggle );
+    const wrapper = mount( GamesToggle, { store, localVue }  );
 
     await wrapper.findComponent({ ref: "tic-tac-toe" }).trigger('click');
     expect(wrapper.emitted().toggle).toBeTruthy();
@@ -16,7 +23,7 @@ describe('GamesToggle.vue', () => {
 
   it('Should should call toggle when toggle button is clicked', async () => {
     const mockMethod = jest.spyOn(GamesToggle.methods, 'toggle');
-    const wrapper = mount( GamesToggle );
+    const wrapper = mount( GamesToggle, { store, localVue });
 
     await wrapper.findComponent({ ref: "tic-tac-toe" }).trigger('click');
     expect(mockMethod).toHaveBeenCalled();

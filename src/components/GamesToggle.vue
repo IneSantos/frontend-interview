@@ -25,6 +25,7 @@ export default {
         toggle() {
             this.showTicTacToe = !this.showTicTacToe;
             this.$emit('toggle', this.showTicTacToe);
+            this.$store.dispatch('resetGame');        
         }
     }
 }

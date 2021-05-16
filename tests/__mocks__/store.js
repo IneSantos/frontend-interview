@@ -1,11 +1,11 @@
 export const storeMocked = {
     actions: {
         setGameStart: jest.fn(),
-        resetBoard: jest.fn(),
         incNumOfGames: jest.fn(),
         setWinsPlayer1: jest.fn(),
         setWinsPlayer2: jest.fn(),
-        setGameHistory: jest.fn()
+        setGameHistory: jest.fn(),
+        resetGame: jest.fn(),
     },
     getters: {
         getHasGameStarted: () => false,

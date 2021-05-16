@@ -60,7 +60,7 @@ export default {
   watch: {
     numOfgames: function () {
       this.finished5rounds =  this.numOfgames === 5 || this.player1 === 3 || this.player2 === 3;
-      this.winner = this.player1 >  this.player2 ? "P1" : "P2";
+      this.winner = this.player1 > this.player2 ? "P1" : "P2";
       this.$store.dispatch('setGameHistory', this.winner);
       
       setTimeout( () => {

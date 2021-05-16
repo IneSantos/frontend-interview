@@ -65,7 +65,7 @@ export default {
   watch: {
     numOfgames: function () {
       this.finished5rounds =  this.numOfgames === 5 || this.player1 === 3 || this.player2 === 3;
-      this.winner = this.player1 >  this.player2 ? "P1" : "P2";
+      this.winner = this.player1 > this.player2 ? "P1" : "P2";
       this.$store.dispatch('setGameHistory', this.winner);
       
       setTimeout( () => {
@@ -74,25 +74,26 @@ export default {
     }
   },
   methods: {
-        playMove(col) {
+        playMove(col) {            
             if (this.finished) {
-            return;
+                return;
             }
+
             this.updateBoard(col);
             this.$forceUpdate();
 
             if(!this.watchStarted){
-            this.$refs.stopwatch.start();
-            this.watchStarted = true;
-            this.$store.dispatch('setGameStart', true);
+                this.$refs.stopwatch.start();
+                this.watchStarted = true;
+                this.$store.dispatch('setGameStart', true);
             }
             
             if (this.checkFourConnected(this.player)) {
-            this.finished = true;
+                this.finished = true;
             }
             else if (this.checkStalemate()) {
-            this.stalemate = true;
-            this.finished = true;
+                this.stalemate = true;
+                this.finished = true;
             } 
             
             this.updateScore();
@@ -136,7 +137,7 @@ export default {
             this.$refs.stopwatch.reset();
 
             setTimeout( () => {
-            this.resetBoard();
+                this.resetBoard();
             }, 1200); 
         },
         scrollToStats: function() {
