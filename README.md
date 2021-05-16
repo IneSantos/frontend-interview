@@ -65,3 +65,10 @@ Select box to change game grid (3x3, 6x6, 9x9)
 ##### 4-in-a-row game
 - Filter on top of game section (3) to toggle game with this being 4-in-a-row.
 - Both games should be functional and respect the requirements stated above.
+
+
+___
+## Proposed Solution
+
+To build this web page I used a framework called VueJS. To see more details on how to run the proposed solution go [here](https://github.com/IneSantos/frontend-interview/blob/master/Proposed%20Solution.md)
+
