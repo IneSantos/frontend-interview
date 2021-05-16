@@ -69,6 +69,7 @@ describe('Board.vue', () => {
     await wrapper.findComponent({ ref: "cell-1-0" }).trigger('click');
     await wrapper.findComponent({ ref: "cell-2-2" }).trigger('click');
     
+    expect(wrapper.vm.$data.finished).toBeTruthy();
     expect(wrapper.vm.$data.player1).toBe(1);
   })
 })

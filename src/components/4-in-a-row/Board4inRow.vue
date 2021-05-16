@@ -1,11 +1,11 @@
 <template>
   <div class="board-4inRow">
     <div class="grid">
-      <div v-for="(row, row_index) in 7" :key="row" class="row">
-        <div v-for="(column, column_index) in 6" :key="column" @click="playMove(row_index)">
+      <div v-for="(column, column_index) in 7" :key="column" class="col" @click="playMove(column_index)"  :ref="`col-${column_index}`">
+        <div v-for="(row, row_index) in 6" :key="row">
             <div class="cell">
-                <span v-if="!isDot(board[column_index][row_index])">{{board[column_index][row_index]}}</span>
-                <span v-if="isDot(board[column_index][row_index])" class="dot" :class="[getDotColor(board[column_index][row_index])]"></span>
+                <span v-if="!isDot(board[row_index][column_index])">{{board[row_index][column_index]}}</span>
+                <span v-if="isDot(board[row_index][column_index])" class="dot" :class="[getDotColor(board[row_index][column_index])]"></span>
             </div>
         </div>
       </div>
@@ -132,9 +132,12 @@ export default {
             this.$store.dispatch('setWinsPlayer2', this.player2);
             this.$store.dispatch('incNumOfGames');
 
+            this.$refs.stopwatch.stop();
+            this.$refs.stopwatch.reset();
+
             setTimeout( () => {
             this.resetBoard();
-            }, 1500); 
+            }, 1200); 
         },
         scrollToStats: function() {
             if(!this.finished5rounds) return; 

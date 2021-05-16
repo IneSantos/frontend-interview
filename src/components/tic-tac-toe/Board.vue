@@ -151,7 +151,7 @@ export default {
 
         setTimeout( () => {
           this.resetBoard();
-        }, 1500); 
+        }, 1200); 
       },
       scrollToStats: function() {
         if(!this.finished5rounds) return; 

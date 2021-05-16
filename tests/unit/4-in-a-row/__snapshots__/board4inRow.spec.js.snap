@@ -1,0 +1,485 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Board.vue renders default 1`] = `
+<div class="board-4inRow">
+  <div class="grid">
+    <div class="col">
+      <div>
+        <div class="cell"><span></span>
+          <!---->
+        </div>
+      </div>
+      <div>
+        <div class="cell"><span></span>
+          <!---->
+        </div>
+      </div>
+      <div>
+        <div class="cell"><span></span>
+          <!---->
+        </div>
+      </div>
+      <div>
+        <div class="cell"><span></span>
+          <!---->
+        </div>
+      </div>
+      <div>
+        <div class="cell"><span></span>
+          <!---->
+        </div>
+      </div>
+      <div>
+        <div class="cell"><span></span>
+          <!---->
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div>
+        <div class="cell"><span></span>
+          <!---->
+        </div>
+      </div>
+      <div>
+        <div class="cell"><span></span>
+          <!---->
+        </div>
+      </div>
+      <div>
+        <div class="cell"><span></span>
+          <!---->
+        </div>
+      </div>
+      <div>
+        <div class="cell"><span></span>
+          <!---->
+        </div>
+      </div>
+      <div>
+        <div class="cell"><span></span>
+          <!---->
+        </div>
+      </div>
+      <div>
+        <div class="cell"><span></span>
+          <!---->
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div>
+        <div class="cell"><span></span>
+          <!---->
+        </div>
+      </div>
+      <div>
+        <div class="cell"><span></span>
+          <!---->
+        </div>
+      </div>
+      <div>
+        <div class="cell"><span></span>
+          <!---->
+        </div>
+      </div>
+      <div>
+        <div class="cell"><span></span>
+          <!---->
+        </div>
+      </div>
+      <div>
+        <div class="cell"><span></span>
+          <!---->
+        </div>
+      </div>
+      <div>
+        <div class="cell"><span></span>
+          <!---->
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div>
+        <div class="cell"><span></span>
+          <!---->
+        </div>
+      </div>
+      <div>
+        <div class="cell"><span></span>
+          <!---->
+        </div>
+      </div>
+      <div>
+        <div class="cell"><span></span>
+          <!---->
+        </div>
+      </div>
+      <div>
+        <div class="cell"><span></span>
+          <!---->
+        </div>
+      </div>
+      <div>
+        <div class="cell"><span></span>
+          <!---->
+        </div>
+      </div>
+      <div>
+        <div class="cell"><span></span>
+          <!---->
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div>
+        <div class="cell"><span></span>
+          <!---->
+        </div>
+      </div>
+      <div>
+        <div class="cell"><span></span>
+          <!---->
+        </div>
+      </div>
+      <div>
+        <div class="cell"><span></span>
+          <!---->
+        </div>
+      </div>
+      <div>
+        <div class="cell"><span></span>
+          <!---->
+        </div>
+      </div>
+      <div>
+        <div class="cell"><span></span>
+          <!---->
+        </div>
+      </div>
+      <div>
+        <div class="cell"><span></span>
+          <!---->
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div>
+        <div class="cell"><span></span>
+          <!---->
+        </div>
+      </div>
+      <div>
+        <div class="cell"><span></span>
+          <!---->
+        </div>
+      </div>
+      <div>
+        <div class="cell"><span></span>
+          <!---->
+        </div>
+      </div>
+      <div>
+        <div class="cell"><span></span>
+          <!---->
+        </div>
+      </div>
+      <div>
+        <div class="cell"><span></span>
+          <!---->
+        </div>
+      </div>
+      <div>
+        <div class="cell"><span></span>
+          <!---->
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div>
+        <div class="cell"><span></span>
+          <!---->
+        </div>
+      </div>
+      <div>
+        <div class="cell"><span></span>
+          <!---->
+        </div>
+      </div>
+      <div>
+        <div class="cell"><span></span>
+          <!---->
+        </div>
+      </div>
+      <div>
+        <div class="cell"><span></span>
+          <!---->
+        </div>
+      </div>
+      <div>
+        <div class="cell"><span></span>
+          <!---->
+        </div>
+      </div>
+      <div>
+        <div class="cell"><span></span>
+          <!---->
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="score">
+    <player-stub name="Player 1" score="0" class="score-info"></player-stub>
+    <stopwatch-stub class="score-info"></stopwatch-stub>
+    <player-stub name="Player 2" score="0" class="score-info"></player-stub>
+  </div>
+  <!---->
+</div>
+`;
+
+exports[`Board.vue renders finished 1`] = `
+<div class="board-4inRow">
+  <div class="grid">
+    <div class="col">
+      <div>
+        <div class="cell"><span></span>
+          <!---->
+        </div>
+      </div>
+      <div>
+        <div class="cell"><span></span>
+          <!---->
+        </div>
+      </div>
+      <div>
+        <div class="cell"><span></span>
+          <!---->
+        </div>
+      </div>
+      <div>
+        <div class="cell"><span></span>
+          <!---->
+        </div>
+      </div>
+      <div>
+        <div class="cell"><span></span>
+          <!---->
+        </div>
+      </div>
+      <div>
+        <div class="cell"><span></span>
+          <!---->
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div>
+        <div class="cell"><span></span>
+          <!---->
+        </div>
+      </div>
+      <div>
+        <div class="cell"><span></span>
+          <!---->
+        </div>
+      </div>
+      <div>
+        <div class="cell"><span></span>
+          <!---->
+        </div>
+      </div>
+      <div>
+        <div class="cell"><span></span>
+          <!---->
+        </div>
+      </div>
+      <div>
+        <div class="cell"><span></span>
+          <!---->
+        </div>
+      </div>
+      <div>
+        <div class="cell"><span></span>
+          <!---->
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div>
+        <div class="cell"><span></span>
+          <!---->
+        </div>
+      </div>
+      <div>
+        <div class="cell"><span></span>
+          <!---->
+        </div>
+      </div>
+      <div>
+        <div class="cell"><span></span>
+          <!---->
+        </div>
+      </div>
+      <div>
+        <div class="cell"><span></span>
+          <!---->
+        </div>
+      </div>
+      <div>
+        <div class="cell"><span></span>
+          <!---->
+        </div>
+      </div>
+      <div>
+        <div class="cell"><span></span>
+          <!---->
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div>
+        <div class="cell"><span></span>
+          <!---->
+        </div>
+      </div>
+      <div>
+        <div class="cell"><span></span>
+          <!---->
+        </div>
+      </div>
+      <div>
+        <div class="cell"><span></span>
+          <!---->
+        </div>
+      </div>
+      <div>
+        <div class="cell"><span></span>
+          <!---->
+        </div>
+      </div>
+      <div>
+        <div class="cell"><span></span>
+          <!---->
+        </div>
+      </div>
+      <div>
+        <div class="cell"><span></span>
+          <!---->
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div>
+        <div class="cell"><span></span>
+          <!---->
+        </div>
+      </div>
+      <div>
+        <div class="cell"><span></span>
+          <!---->
+        </div>
+      </div>
+      <div>
+        <div class="cell"><span></span>
+          <!---->
+        </div>
+      </div>
+      <div>
+        <div class="cell"><span></span>
+          <!---->
+        </div>
+      </div>
+      <div>
+        <div class="cell"><span></span>
+          <!---->
+        </div>
+      </div>
+      <div>
+        <div class="cell"><span></span>
+          <!---->
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div>
+        <div class="cell"><span></span>
+          <!---->
+        </div>
+      </div>
+      <div>
+        <div class="cell"><span></span>
+          <!---->
+        </div>
+      </div>
+      <div>
+        <div class="cell"><span></span>
+          <!---->
+        </div>
+      </div>
+      <div>
+        <div class="cell"><span></span>
+          <!---->
+        </div>
+      </div>
+      <div>
+        <div class="cell"><span></span>
+          <!---->
+        </div>
+      </div>
+      <div>
+        <div class="cell"><span></span>
+          <!---->
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div>
+        <div class="cell"><span></span>
+          <!---->
+        </div>
+      </div>
+      <div>
+        <div class="cell"><span></span>
+          <!---->
+        </div>
+      </div>
+      <div>
+        <div class="cell"><span></span>
+          <!---->
+        </div>
+      </div>
+      <div>
+        <div class="cell"><span></span>
+          <!---->
+        </div>
+      </div>
+      <div>
+        <div class="cell"><span></span>
+          <!---->
+        </div>
+      </div>
+      <div>
+        <div class="cell"><span></span>
+          <!---->
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="score">
+    <div class="player score-info">
+      <h1>Player 1</h1>
+      <p>0</p>
+    </div>
+    <div class="score-info">
+      <p>00:00:00</p>
+    </div>
+    <div class="player score-info">
+      <h1>Player 2</h1>
+      <p>0</p>
+    </div>
+  </div>
+  <div class="status">
+    <div class="result"><span class="winner"></span> wins!</div>
+  </div>
+</div>
+`;
