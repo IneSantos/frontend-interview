@@ -14,11 +14,11 @@ exports[`Statistics.vue renders default 1`] = `
           <p>Player 1</p>
           <div class="victory-loss">
             <div class="stats">
-              <div class="statsCircle">0%</div>
+              <div class="statsCircle red">0%</div>
               <p>V</p>
             </div>
             <div class="stats">
-              <div class="statsCircle">100%</div>
+              <div class="statsCircle green">100%</div>
               <p>L</p>
             </div>
           </div>
@@ -27,11 +27,11 @@ exports[`Statistics.vue renders default 1`] = `
           <p>Player 2</p>
           <div class="victory-loss">
             <div class="stats">
-              <div class="statsCircle">0%</div>
+              <div class="statsCircle red">0%</div>
               <p>V</p>
             </div>
             <div class="stats">
-              <div class="statsCircle">100%</div>
+              <div class="statsCircle green">100%</div>
               <p>L</p>
             </div>
           </div>

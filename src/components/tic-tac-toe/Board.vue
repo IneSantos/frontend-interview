@@ -1,10 +1,5 @@
 <template>
   <div class="tictactoe-board">
-    <div v-if="finished5rounds" class="status">
-      <div v-if="stalemate" class="result stale">It's a draw!<br>Stalemate!</div>
-      <div v-else class="result">Finished!<br><span class="winner">{{winner}}</span> wins!</div>
-    </div>
-
     <div class="grid">
       <div v-for="(row, row_index) in 3" :key="row">
         <div v-for="(column, column_index) in 3" :key="column">
@@ -18,6 +13,12 @@
       <StopWatch ref="stopwatch" class="score-info"/>
       <Player name="Player 2" :score="player2" class="score-info"/>
     </div>
+
+    <div v-if="finished5rounds" class="status">
+      <div v-if="stalemate" class="result stale">It's a draw!<br>Stalemate!</div>
+      <div v-else class="result"><span class="winner">{{winner}}</span> wins!</div>
+    </div>
+    
   </div>
 </template>
 
@@ -58,9 +59,10 @@ export default {
   },
   watch: {
     numOfgames: function () {
-      this.finished5rounds =  this.numOfgames === 4;
+      this.finished5rounds =  this.numOfgames === 5 || this.player1 === 3 || this.player2 === 3;
       this.winner = this.player1 >  this.player2 ? "P1" : "P2";
       this.$store.dispatch('setGameHistory', this.winner);
+      this.scrollToStats();
     }
   },
   methods: {
@@ -78,11 +80,16 @@ export default {
           this.$store.dispatch('setGameStart', true);
         }
 
-        this.finished = this.checkWinner() || this.checkStalemate();
-        this.stalemate = this.checkStalemate();
+        if (this.checkWinner()) {
+          this.finished = true;
+        }
+        else if (this.checkStalemate()) {
+          this.stalemate = true;
+          this.finished = true;
+        } 
+        
         this.updateScore();
         this.nextPlayer();
-        
       },
       nextPlayer: function() {
         this.player = this.player === "x" ? "o" : "x";
@@ -129,7 +136,8 @@ export default {
       updateScore: function() {
         if(!this.finished) return;
 
-        this.player === "x" ? ++this.player1 :  ++this.player2;
+        if(!this.stalemate) this.player === "x" ? ++this.player1 :  ++this.player2;
+
         this.$store.dispatch('setWinsPlayer1', this.player1);
         this.$store.dispatch('setWinsPlayer2', this.player2);
         this.$store.dispatch('incNumOfGames');
@@ -137,6 +145,12 @@ export default {
         this.$refs.stopwatch.stop();
         this.$refs.stopwatch.reset();
         this.resetBoard();
+      },
+      scrollToStats() {
+        if(!this.finished5rounds) return; 
+
+        let container = document.getElementById("statistics");
+        container.scrollIntoView({ behavior: 'smooth', block: 'end', inline: 'nearest'});
       }
 
   }

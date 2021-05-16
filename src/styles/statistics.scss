@@ -58,6 +58,19 @@
     color: #fff;
     text-align: center;
     background: grey;
+
+    &.red {
+        background: #E05050;
+    }
+
+    &.green {
+        background: #00DCA4;
+    }
+
+    &.yellow {
+        background: #F1C40F;
+
+    }
 }
 
 .stats {

@@ -12,11 +12,11 @@
                     <p>Player 1</p>
                     <div class="victory-loss">
                         <div class="stats">
-                            <div class="statsCircle">{{winsPlayer1}}%</div>
+                            <div class="statsCircle" :class="[getColor(winsPlayer1)]">{{winsPlayer1}}%</div>
                             <p>V</p>
                         </div> 
                         <div class="stats">
-                            <div class="statsCircle">{{lossPlayer1}}%</div>
+                            <div class="statsCircle" :class="[getColor(lossPlayer1)]">{{lossPlayer1}}%</div>
                             <p>L</p>
                         </div> 
                     </div> 
@@ -25,11 +25,11 @@
                     <p>Player 2</p>
                     <div class="victory-loss">
                         <div class="stats">
-                            <div class="statsCircle">{{winsPlayer2}}%</div>
+                            <div class="statsCircle" :class="[getColor(winsPlayer2)]">{{winsPlayer2}}%</div>
                             <p>V</p>
                         </div> 
                         <div class="stats">
-                            <div class="statsCircle">{{lossPlayer2}}%</div>
+                            <div class="statsCircle" :class="[getColor(lossPlayer2)]">{{lossPlayer2}}%</div>
                             <p>L</p>
                         </div>
                     </div> 
@@ -99,6 +99,13 @@ export default {
     hasGameStarted: function () {
        this.$refs.stopwatch.start();
     }
-  }
+  },
+    methods: {
+        getColor: function(val) {
+            if(val === 0) return 'red';
+            if(val > 50) return 'green';
+            if(val > 0) return 'yellow';
+        }
+    }
 }
 </script>

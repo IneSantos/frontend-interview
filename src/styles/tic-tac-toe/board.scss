@@ -26,14 +26,21 @@
 }
 
 .score-info {
-    margin: 0px 38px;
+    margin: 0 8px;
+
+    h1 { 
+        font-size: 32px;
+    }
+
+    @media only screen and (min-width: 768px) {
+        margin: 0px 38px;
+    }
 }
 
 .status {
     text-align: center;
     font-size: 40px;
-    line-height: 60px;
-    margin: 20px 0 20px;
+    line-height: 140px;
     height: 120px;
 }
 
